@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { Star, CheckCircle, Clock, Award, Phone } from 'lucide-react';
+import { Star, CheckCircle, Clock, Phone } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 interface FormData {
@@ -25,7 +25,7 @@ const HeroOptimized = () => {
     'Binnen 24 uur reactie'
   ];
 
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
+  const { register, handleSubmit, reset } = useForm<FormData>();
 
   useEffect(() => {
     const interval = setInterval(() => {
