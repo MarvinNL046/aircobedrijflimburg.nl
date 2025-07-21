@@ -8,6 +8,7 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const ProductsPage = lazy(() => import('./pages/ProductsPage'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
+const ContactWebhookTest = lazy(() => import('./pages/ContactWebhookTest'));
 
 // Loading component
 const PageLoader = () => (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/producten" element={<ProductsPage />} />
             <Route path="/over-ons" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/contact-webhook-test" element={<ContactWebhookTest />} />
           </Routes>
         </Suspense>
       </main>

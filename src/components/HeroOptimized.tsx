@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Star, CheckCircle, Clock, Phone } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import { sendEmail } from '../utils/email';
 
 interface FormData {
   name: string;
@@ -43,21 +43,14 @@ const HeroOptimized = () => {
     setIsSubmitting(true);
     
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
-          to_name: 'Airco Bedrijf Limburg',
-          from_name: data.name,
-          from_email: data.email,
-          phone: data.phone,
-          service: `Dienst: ${data.service === 'installatie' ? 'Nieuwe airco installeren' : data.service === 'onderhoud' ? 'Airco onderhoud' : 'Airco reparatie'}`,
-          city: data.city,
-          message: data.message || 'Geen aanvullende informatie',
-          to_email: 'info@aircobedrijflimburg.nl'
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
+      await sendEmail({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        city: data.city,
+        service: data.service,
+        message: data.message
+      });
       
       setSubmitMessage('Bedankt! We nemen binnen 24 uur contact met u op.');
       reset();
