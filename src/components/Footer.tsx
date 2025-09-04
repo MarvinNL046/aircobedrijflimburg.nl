@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Star } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Star, Calendar } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -61,6 +61,10 @@ const Footer = () => {
               <a href="mailto:info@aircobedrijflimburg.nl" className="flex items-center space-x-2 hover:text-orange-400">
                 <Mail className="w-4 h-4" />
                 <span>info@aircobedrijflimburg.nl</span>
+              </a>
+              <a href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-orange-400">
+                <Calendar className="w-4 h-4" />
+                <span>Plan online afspraak</span>
               </a>
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageCircle, Calendar } from 'lucide-react';
 import { sendEmail } from '../utils/email';
 
 interface FormData {
@@ -78,6 +78,16 @@ const Contact = () => {
                   <div>
                     <div className="font-semibold text-gray-900">WhatsApp</div>
                     <div className="text-gray-600">06 3648 1054</div>
+                  </div>
+                </a>
+
+                <a href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-4 group">
+                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all">
+                    <Calendar className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">Online Afspraak Maken</div>
+                    <div className="text-gray-600">Plan direct uw afspraak</div>
                   </div>
                 </a>
 

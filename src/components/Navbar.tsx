@@ -70,6 +70,14 @@ const Navbar = () => {
                 <Phone className="w-4 h-4" />
                 <span>046 202 1430</span>
               </a>
+              <a 
+                href="https://afspraken.staycoolairco.nl/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                Plan Afspraak
+              </a>
               <Link to="/contact" className="btn-primary">
                 Gratis Offerte
               </Link>
@@ -118,6 +126,15 @@ const Navbar = () => {
                 >
                   <Mail className="w-4 h-4" />
                   <span>info@aircobedrijflimburg.nl</span>
+                </a>
+                <a
+                  href="https://afspraken.staycoolairco.nl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="btn-secondary block text-center mb-3"
+                >
+                  Plan Afspraak
                 </a>
                 <Link
                   to="/contact"

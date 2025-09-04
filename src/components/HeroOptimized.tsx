@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
-import { Star, CheckCircle, Clock, Phone } from 'lucide-react';
+import { Star, CheckCircle, Clock, Phone, Calendar } from 'lucide-react';
 import { sendEmail } from '../utils/email';
 
 interface FormData {
@@ -121,6 +121,10 @@ const HeroOptimized = () => {
               <a href="tel:0462021430" className="btn-primary flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span>046 202 1430</span>
+              </a>
+              <a href="https://afspraken.staycoolairco.nl/" target="_blank" rel="noopener noreferrer" className="btn-secondary flex items-center justify-center space-x-2">
+                <Calendar className="w-5 h-5" />
+                <span>Plan Afspraak Online</span>
               </a>
               <a href="https://wa.me/31636481054" target="_blank" rel="noopener noreferrer" className="btn-secondary flex items-center justify-center">
                 WhatsApp
