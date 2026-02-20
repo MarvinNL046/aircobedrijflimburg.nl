@@ -4,7 +4,7 @@ const DEBUG_MODE = false; // Enable for troubleshooting
 
 // LeadFlow CRM configuration
 const LEADFLOW_URL = "https://wetryleadflow.com/api/webhooks/leads";
-const LEADFLOW_API_KEY = "lf_1wYS_sm_h375UmWm5TuvN7zHFLHltLHE";
+const LEADFLOW_API_KEY = "lf_lRyHo1ENukt9VsG9gYT8EKeDA_nKuoQ1";
 
 export interface EmailData {
   name: string;
