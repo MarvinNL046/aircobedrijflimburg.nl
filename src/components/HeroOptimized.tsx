@@ -54,6 +54,11 @@ const HeroOptimized = () => {
       
       setSubmitMessage('Bedankt! We nemen binnen 24 uur contact met u op.');
       reset();
+
+      // Redirect to thank you page after short delay
+      setTimeout(() => {
+        window.location.href = 'https://staycoolairco.nl/tot-snel';
+      }, 1500);
     } catch (error) {
       setSubmitMessage('Er ging iets mis. Bel ons op 046 202 1430.');
     } finally {
